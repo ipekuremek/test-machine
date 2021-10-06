@@ -1,0 +1,109 @@
+#include <LiquidCrystal.h>
+#define samandirapin A0
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int buttonState = 0;
+int buttonPin =6;
+int i;
+/*int LED =10 ;
+int LED1 =7 ;/*sarı 8*/
+int sayi=3;
+int model1;
+int r3=8;
+int r2=9;
+int r1=7;
+int deger = 0;
+float direnc;
+int x=0; /*step sayısı */
+
+
+void setup() {  
+int buttonPin =6;
+pinMode(6, INPUT);
+pinMode(7, OUTPUT);
+pinMode(8, OUTPUT);
+pinMode(9, OUTPUT);
+lcd.begin(16,2); 
+Serial.begin(9600);
+Serial.println("Direnc Deger Okuma");
+}
+
+void loop(){
+if(digitalRead(6)==1){
+lcd.setCursor(0,1); 
+lcd.print("M");
+lcd.print(i + 1);
+i++;
+delay(500);
+modelone();
+delay(100);
+modeltwo();
+delay(100);
+modelthree(); 
+}}
+
+void modelone(){  
+if(i==1){
+lcd.setCursor(2,3);  
+lcd.print("=");
+lcd.print("4,9,101");    
+digitalWrite(7, HIGH); 
+digitalWrite(8, HIGH);  
+digitalWrite(9, HIGH);
+for (x==0 ; x<10000 ; x++){
+deger = analogRead(samandirapin);
+float gerilim = (5.00 / 1024.00) * deger; //5V gerilim, 1024 bite bölünür ve dirençten gelen değer ile çarpılır; değerin eşiti olan gerilim hesaplanır
+Serial.println(gerilim);  
+delay(300);
+/*direnc=(gerilim /) ;
+Serial.println(direnc); */
+if (x==50){
+return;
+}}}}
+/*digitalWrite(LED, HIGH); 
+digitalWrite(LED1, LOW);
+delay(10); */
+void modeltwo(){
+if(i==2){
+lcd.setCursor(2,3);  
+lcd.print("=");
+lcd.print("2,98,117");
+while(i<3){
+digitalWrite(7, LOW); 
+digitalWrite(8, HIGH);  
+digitalWrite(9, HIGH);
+for (x==0 ; x<1500 ; x++){
+deger = analogRead(samandirapin);
+float gerilim = (5.00 / 1024.00) * deger; //5V gerilim, 1024 bite bölünür ve dirençten gelen değer ile çarpılır; değerin eşiti olan gerilim hesaplanır
+/*Serial.println(gerilim);  */
+delay(100);
+
+/*digitalWrite(LED1, HIGH); 
+digitalWrite(LED, LOW);
+delay(10); */
+if (x==70){
+return;
+}}}}}
+
+void modelthree(){
+if(i==3){
+lcd.setCursor(2,3);  
+lcd.print("=");
+lcd.print("7,8 ,105");
+while(i<4){
+digitalWrite(7, HIGH); 
+digitalWrite(8, HIGH);  
+digitalWrite(9, HIGH);
+for (x==0 ; x<600 ; x++){
+deger = analogRead(samandirapin);
+float gerilim = (5.00 / 1024.00) * deger; //5V gerilim, 1024 bite bölünür ve potansiyometreden gelen değer ile çarpılır; değerin eşiti olan gerilim hesaplanır
+Serial.println(gerilim); 
+delay(50);
+if (x==300){
+return;
+}}} }}
+/*digitalWrite(LED1, HIGH); 
+digitalWrite(LED, LOW);
+delay(10); 
+digitalWrite(LED, HIGH);
+digitalWrite(LED1, LOW); 
+delay(10); */
