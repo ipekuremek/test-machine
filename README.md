@@ -1,4 +1,4 @@
-# Test Machine
+# Test Machine for automotive applications
 A test machine  for automotive applications.
 I've used Arduino UNO, LCD, a button and pull up resistors for ADC. The operation is basically reading resistor values from a automotive fuel level sensor and
 comparing it with the model selection.
